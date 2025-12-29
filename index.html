@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="container-bg hidden">
+        <div class="form-content">
+          <form novalidate>
+            <h1>Stay updated!</h1>
+            <p>Join 60,000+ product managers receiving monthly updates on:</p>
+            <ul>
+              <li>
+                <img src="assets/images/icon-list.svg" alt="" />Product
+                discovery and building what matters
+              </li>
+              <li>
+                <img src="assets/images/icon-list.svg" alt="" />Measuring to
+                ensure updates are a success
+              </li>
+              <li>
+                <img src="assets/images/icon-list.svg" alt="" />And much more!
+              </li>
+            </ul>
+            <div>
+              <label for="email"
+                >Email address
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="email@company.com"
+                />
+                <span aria-live="polite" class="error"></span>
+              </label>
+            </div>
+            <button id="submit-button" type="submit">
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </div>
+        <div class="form-image">
+          <img
+            src="/assets/images/illustration-sign-up-desktop.svg"
+            alt="Desktop Illustration"
+            class="desktop-illustration"
+          />
+          <img
+            src="/assets/images/illustration-sign-up-tablet.svg"
+            alt="Tablet Illustration"
+            class="tablet-illustration"
+          />
+          <img
+            src="/assets/images/illustration-sign-up-mobile.svg"
+            alt="Mobile Illustration"
+            class="mobile-illustration"
+          />
+        </div>
+      </div>
+      <div>
+        <section class="success-message" aria-live="polite">
+          <img
+            src="assets/images/icon-success.svg"
+            alt="Success Icon"
+            class="success-icon"
+          />
+          <h1>Thanks for subscribing!</h1>
+          <p>
+            A confirmation email has been sent to
+            <span class="user-email" id="user-email"></span>. Please open it and
+            click the button inside to confirm your subscription.
+          </p>
+          <button id="dismiss-button" type="button">Dismiss message</button>
+        </section>
+      </div>
+    </div>
+
+    <div class="attribution" style="color: white">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+        Frontend Mentor </a
+      >. Coded by
+      <a
+        href="https://www.emanuelstoica.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Emanuel</a
+      >.
+    </div>
+    <div
+      id="viewport-size"
+      style="
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 10px;
+        font-family: monospace;
+        z-index: 9999;
+        border-radius: 4px;
+        font-size: 14px;
+      "
+    >
+      <span id="width"></span> x <span id="height"></span>
+    </div>
+    <script>
+      function updateSize() {
+        document.getElementById("width").textContent = window.innerWidth;
+        document.getElementById("height").textContent = window.innerHeight;
+      }
+
+      updateSize();
+      window.addEventListener("resize", updateSize);
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

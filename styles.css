@@ -1,0 +1,351 @@
+*/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Styling below */
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: hsl(235, 18%, 26%);
+  color: hsl(234, 29%, 20%);
+}
+
+/* Illustrations */
+@media (min-width: 1024px) {
+  .tablet-illustration {
+    display: none;
+  }
+
+  .mobile-illustration {
+    display: none;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+  .desktop-illustration {
+    display: none;
+  }
+
+  .mobile-illustration {
+    display: none;
+  }
+}
+@media (max-width: 599px) {
+  .desktop-illustration {
+    display: none;
+  }
+
+  .tablet-illustration {
+    display: none;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-block: 12rem;
+}
+
+.container-bg {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  background-color: hsl(231, 100%, 99%);
+  margin-block: 1rem;
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+  .container-bg {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .container-bg {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    gap: 1rem;
+    border-radius: 0;
+    padding: 0;
+    margin-block: 0;
+    box-shadow: none;
+  }
+  .container {
+    align-items: start;
+    background-color: hsl(0, 0%, 100%);
+    padding: 0;
+    margin: 0;
+  }
+
+  .form-content {
+    padding: 1.5rem !important;
+    max-width: 100%;
+  }
+
+  .form-image img {
+    border-radius: 0;
+    width: 100%;
+    height: auto;
+  }
+  body {
+    margin: 0;
+    background-color: #ffffff;
+  }
+}
+
+.form-content {
+  padding: 2rem;
+  max-width: 450px;
+}
+
+.form-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.form-content p,
+li {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.form-content p {
+  margin-bottom: 1.5rem;
+}
+
+li {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  font-weight: 450;
+}
+
+ul {
+  margin-block-start: 0rem;
+  margin-block-end: 0rem;
+  padding-inline-start: 0rem;
+}
+
+.form-content ul {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+input[type="email"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid hsl(233, 8%, 79%);
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+input[type="email"]::placeholder {
+  color: #bbbb;
+}
+
+/* invalid fields */
+input:invalid {
+  border-color: #f28e8e;
+  background-color: #ffd6d6;
+  color: #ff5555;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+label {
+  position: relative;
+}
+/* error message styles */
+.error {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: max-content;
+  padding: 0;
+
+  font-size: 80%;
+  color: rgb(255, 75, 75);
+  border-radius: 0 0 5px 5px;
+
+  box-sizing: border-box;
+}
+
+.error.active {
+  padding: 0.3em;
+}
+
+button {
+  width: 100%;
+  padding: 1rem;
+  background-color: hsl(235, 18%, 26%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #ff5353 50%, #ff6f15 100%);
+  box-shadow: 0 4px 15px rgb(250, 99, 99);
+}
+
+.success-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: hsl(231, 100%, 99%);
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  max-width: 400px;
+
+  button {
+    margin-top: 1rem;
+  }
+  button:hover {
+    background: linear-gradient(90deg, #ff5353 50%, #ff6f15 100%);
+    box-shadow: 0 4px 15px rgb(250, 99, 99);
+  }
+
+  img {
+    height: 2rem;
+    width: auto;
+  }
+
+  span {
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 599px) {
+  .success-message {
+    margin-top: 5rem;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.attribution {
+  margin-top: 5rem;
+  padding: 1rem;
+}
+
+@media (max-width: 599px) {
+  .attribution {
+    color: #000000 !important;
+  }
+}

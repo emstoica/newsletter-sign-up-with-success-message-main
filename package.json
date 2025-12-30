@@ -2,7 +2,6 @@
   "name": "advice-generator-app",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "devDependencies": {
     "vite": "^7.3.0"
   },

@@ -22,90 +22,94 @@
     <link rel="stylesheet" href="./src/styles.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="container-bg">
-        <div class="form-content">
-          <form novalidate>
-            <h1>Stay updated!</h1>
-            <p>Join 60,000+ product managers receiving monthly updates on:</p>
-            <ul>
-              <li>
-                <img src="src/images/icon-list.svg" alt="" />Product discovery
-                and building what matters
-              </li>
-              <li>
-                <img src="src/images/icon-list.svg" alt="" />Measuring to ensure
-                updates are a success
-              </li>
-              <li>
-                <img src="src/images/icon-list.svg" alt="" />And much more!
-              </li>
-            </ul>
-            <div>
-              <label for="email"
-                >Email address
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="email@company.com"
-                />
-                <span aria-live="polite" class="error"></span>
-              </label>
-            </div>
-            <button id="submit-button" type="submit">
-              Subscribe to monthly newsletter
-            </button>
-          </form>
+    <main>
+      <div class="container">
+        <div class="container-bg">
+          <div class="form-content">
+            <form novalidate>
+              <h1>Stay updated!</h1>
+              <p>Join 60,000+ product managers receiving monthly updates on:</p>
+              <ul>
+                <li>
+                  <img src="src/images/icon-list.svg" alt="" />Product discovery
+                  and building what matters
+                </li>
+                <li>
+                  <img src="src/images/icon-list.svg" alt="" />Measuring to
+                  ensure updates are a success
+                </li>
+                <li>
+                  <img src="src/images/icon-list.svg" alt="" />And much more!
+                </li>
+              </ul>
+              <div>
+                <label for="email"
+                  >Email address
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="email@company.com"
+                  />
+                  <span aria-live="polite" class="error"></span>
+                </label>
+              </div>
+              <button id="submit-button" type="submit">
+                Subscribe to monthly newsletter
+              </button>
+            </form>
+          </div>
+          <div class="form-image">
+            <img
+              src="src/images/illustration-sign-up-desktop.svg"
+              alt="Desktop Illustration"
+              class="desktop-illustration"
+            />
+            <img
+              src="src/images/illustration-sign-up-tablet.svg"
+              alt="Tablet Illustration"
+              class="tablet-illustration"
+            />
+            <img
+              src="src/images/illustration-sign-up-mobile.svg"
+              alt="Mobile Illustration"
+              class="mobile-illustration"
+            />
+          </div>
         </div>
-        <div class="form-image">
-          <img
-            src="src/images/illustration-sign-up-desktop.svg"
-            alt="Desktop Illustration"
-            class="desktop-illustration"
-          />
-          <img
-            src="src/images/illustration-sign-up-tablet.svg"
-            alt="Tablet Illustration"
-            class="tablet-illustration"
-          />
-          <img
-            src="src/images/illustration-sign-up-mobile.svg"
-            alt="Mobile Illustration"
-            class="mobile-illustration"
-          />
+        <div>
+          <section class="success-message hidden" aria-live="polite">
+            <img
+              src="src/images/icon-success.svg"
+              alt="Success Icon"
+              class="success-icon"
+            />
+            <h1>Thanks for subscribing!</h1>
+            <p>
+              A confirmation email has been sent to
+              <span class="user-email" id="user-email"></span>. Please open it
+              and click the button inside to confirm your subscription.
+            </p>
+            <button id="dismiss-button" type="button">Dismiss message</button>
+          </section>
         </div>
       </div>
-      <div>
-        <section class="success-message hidden" aria-live="polite">
-          <img
-            src="src/images/icon-success.svg"
-            alt="Success Icon"
-            class="success-icon"
-          />
-          <h1>Thanks for subscribing!</h1>
-          <p>
-            A confirmation email has been sent to
-            <span class="user-email" id="user-email"></span>. Please open it and
-            click the button inside to confirm your subscription.
-          </p>
-          <button id="dismiss-button" type="button">Dismiss message</button>
-        </section>
-      </div>
-    </div>
+    </main>
 
-    <div class="attribution" style="color: white">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
-        Frontend Mentor </a
-      >. Coded by
-      <a
-        href="https://www.emanuelstoica.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        >Emanuel</a
-      >.
-    </div>
+    <footer>
+      <div class="attribution" style="color: white">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+          Frontend Mentor </a
+        >. Coded by
+        <a
+          href="https://www.emanuelstoica.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Emanuel</a
+        >.
+      </div>
+    </footer>
     <script type="module" src="./src/script.js"></script>
   </body>
 </html>
